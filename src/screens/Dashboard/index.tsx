@@ -1,5 +1,6 @@
 import React from 'react';
 import { HighlightCard } from '../../components/HighlightCard';
+import { TransactionCard } from '../../components/TransactionCard';
 
 import { 
     Container, 
@@ -11,7 +12,9 @@ import {
     UserInfo, 
     UserName, 
     UserWrapper,
-    HighlightCards
+    HighlightCards,
+    Transactions, 
+    Title
 } from './styles';
 
 export function Dashboard(){
@@ -23,7 +26,7 @@ export function Dashboard(){
                         <Photo source={{ uri: 'https://github.com/JoaoSipauba.png'}}/>
                         <User>
                             <UserGreeting>Olá,</UserGreeting>
-                            <UserName>Rodrigo</UserName>
+                            <UserName>João Sipauba</UserName>
                         </User>
                     </UserInfo>
                     <Icon name="power"/>
@@ -50,6 +53,12 @@ export function Dashboard(){
                     type="total"
                 />
             </HighlightCards>
+
+            <Transactions>
+                <Title>Listagem</Title>
+
+                <TransactionCard />
+            </Transactions>
         </Container>
     )
 }
